@@ -36,12 +36,12 @@ $(document).ready(function () {
 	//	SMOOTH SCHROLL FOR IE /EDGE/SAFARI
 
 	$("a").on('click', function (event) {
-		if (this.hash !== "") {
+		if(this.hash !== "") {
 			event.preventDefault();
 			var hash = this.hash;
-			$('html,body,').animate({
+			$('html,body').animate({
 				scrollTop: $(hash).offset().top
-			}, 800, function () {
+			}, 800,function() {
 				window.location.hash = hash;
 			});
 		}
